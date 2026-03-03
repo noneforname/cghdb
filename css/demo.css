@@ -1,0 +1,635 @@
+@font-face {
+    font-family: kaiti;
+    src: url(./zhengkai.v1.001.woff);
+}
+*{   margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none; 
+    font-family: kaiti;
+    
+}
+body{
+    background-image: url(../pics/背景图.jpg);
+    background-size: cover;
+}
+
+
+.top{
+    width: 100vw;
+    background-color: white;
+    height: 30vh;
+    }
+
+.top img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+.navbar{
+    width: 100vw;
+    color: white;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+ul{
+    list-style: none;
+}
+
+.navlink{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #224870;
+    width: 100%;
+    height: 12vh;
+    
+}
+
+.navlink li{
+    margin: 0 20px !important;
+    padding: 8px 10px !important;
+    text-align: center !important;
+    font-size: 25px !important;
+    font-weight: normal !important;
+}
+.navlink li:hover{
+    background-color: gray;
+    border-radius: 10px;
+    font-weight: 700;
+}
+.menu-btn{
+    position: absolute;
+    margin-left: 3px;
+    top: 2px;
+    right: 4px;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+/* 标题部分 */
+.title{
+    margin-top: 10vh;
+    width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.title-line{
+    height: 2px;
+    background-color: #224870;
+    width: 8vw;
+}
+.title-dot{
+    width: 8px;
+    height: 8px;
+    background-color: #224870;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+.title-content{
+    background-color: #224870;
+    color: white;
+    padding: 8px 20px;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 2px;
+    text-align: center;
+    
+}
+
+section{
+    width: 80%;
+    margin: 80px auto;
+}
+
+
+
+/* 冬捕文化盒子 */
+.big-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 30px 0;
+}
+
+.box{
+    width: 30%;
+    min-width: 250px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    transition: none;
+}
+
+.box:hover{
+    transform: none;
+    box-shadow: none;
+}
+
+.box-pro{
+    width: 30%;
+    min-width: 250px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    transition: none;
+}
+
+.box-pro:hover{
+    transform: none;
+    box-shadow: none;
+}
+
+.box a,.box-pro a{
+    display: block;
+    margin-top: 15px;
+    color: #224870;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.box a:hover,.box-pro a:hover{
+    color: #1a365d;
+}
+
+.box-pic{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.box:hover .box-pic,.box-pro:hover .box-pic{
+    transform: scale(1.02);
+}
+
+.box-pro .box-pic{
+    height: 220px;
+}
+
+.box-content p{
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+}
+
+/* 冬捕影像 */
+.video-box{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 40px 0;
+    justify-items: center;
+}
+
+/* 电脑尺寸下的布局优化 */
+@media only screen and (min-width: 1200px){
+    .video-box{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+}
+
+.video-box .vi{
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 9/16;
+    margin: 0;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-box .vi:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.video-box .vi img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* 对于手机屏幕的响应式调整 */
+@media only screen and (max-width: 767px){
+    .video-box{
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 3px;
+        padding: 0 3px;
+    }
+    
+    .video-box .vi{
+        max-width: 200px;
+    }
+    
+    /* 调整IP设计部分在手机上的间距 */
+    .design{
+        gap: 3px;
+        padding: 0 3px;
+    }
+    
+    .design .show{
+        max-width: 200px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .video-box{
+        grid-template-columns: 1fr 1fr;
+        gap: 3px;
+        padding: 0 3px;
+    }
+    
+    .video-box .vi{
+        max-width: 150px;
+    }
+    
+    /* 调整IP设计部分在窄手机上的间距 */
+    .design{
+        gap: 3px;
+        padding: 0 3px;
+    }
+    
+    .design .show{
+        max-width: 150px;
+    }
+}
+
+/* 底部 */
+.footer{
+    height: auto;
+    min-height: 120px;
+    width: 100%;
+    background-color: #224870;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+.foot-content{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.foot-content p{
+    font-size: 14px;
+    margin: 8px 0;
+    color: white;
+    font-weight: normal;
+}
+
+@media only screen and (max-width: 768px){
+    .footer{
+        padding: 20px 15px;
+        min-height: 100px;
+    }
+    
+    .foot-content p{
+        font-size: 14px;
+        margin: 6px 0;
+    }
+}
+.design{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 40px 0;
+    justify-items: center;
+}
+
+/* 电脑尺寸下的布局优化 */
+@media only screen and (min-width: 1200px){
+    .design{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+    
+    .show{
+        max-width: 280px;
+    }
+}
+.show，.vi{
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 9/16;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+.show:hover{
+    transform: translateY(-5px);
+}
+.show img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 网格布局会自动处理响应式设计 */
+/* 对于不同屏幕尺寸的微调 */
+@media only screen and (max-width: 767px){
+    .design{
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        padding: 0 10px;
+    }
+    
+    .show,.vi{
+        max-width: 200px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .design{
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 0 10px;
+    }
+    
+    .show,.vi{
+        max-width: 150px;
+    }
+}
+/* 媒体响应 */
+/* 大屏设备保持原布局 */
+
+/* 平板设备 */
+@media only screen and (max-width: 991px) and (min-width: 768px){
+    .title-content{
+        font-size: 24px;
+    }
+    .navlink li{
+        font-size: 25px !important;
+        margin: 0 15px !important;
+        font-weight: normal !important;
+    }
+    .box a,.box-pro a{
+        font-size: 22px;
+    }
+    .box-content p{
+        font-size: 16px;
+    }
+    /* 平板上一行两个布局 */
+    .big-box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    
+    /* 所有big-box保持一行两个布局 */
+    .big-box .box,
+    .big-box .box-pro{
+        width: calc(50% - 10px);
+        margin: 0;
+    }
+    
+    /* 确保冬捕流程部分的布局正确 */
+    .big-box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    
+    /* 让只有一个盒子的big-box居中显示 */
+    .big-box:has(.box-pro:only-child){
+        justify-content: center;
+    }
+    
+    .big-box:has(.box-pro:only-child) .box-pro{
+        width: 50%;
+        min-width: 300px;
+    }
+    .video-box,.design{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    .video-box .vi,.show{
+        width: calc(50% - 10px);
+        margin: 0;
+    }
+}
+
+/* 手机设备 */
+@media only screen and (max-width:850px){
+    .top{
+        margin-bottom: 0;
+        height: 20vh;
+    }
+    .top img {
+        height: 20vh;
+    }
+
+    .navbar{
+        padding: 0;
+
+    }
+    .title-content,.title-dot,.title-line{
+        margin-top:20px;
+        
+        
+    }
+    .title-content{
+        font-size: 18px;
+    }
+    
+    /* 冬捕文化框框与海报的距离 */
+    .big-box{
+        margin-top:15px;
+        margin-bottom: 25px;
+    }
+    
+    .navlink{
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background-color: rgba(34, 72, 112, 0.95);
+        background-image: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        transform: translateY(-100%);
+        transition: transform 0.5s ease;
+
+    }
+    .navlink.menu-btn{
+        transform: translateY(0);
+    }
+    .menu-btn{
+        margin-top: 0;
+        display: block;
+
+    }
+    
+    .navlink li{
+        margin: 30px auto !important;
+        font-size: 20px !important;
+        font-weight: normal !important;
+    }
+    
+    /* 手机上一行两个布局 */
+    .big-box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top:20px;
+        margin-bottom: 30px;
+        padding: 0 10px;
+        gap: 8px;
+    }
+    
+    .box,.box-pro{
+        width: 48%;
+        min-width: 150px;
+        height: auto;
+        margin: 0;
+        float: none;
+        padding: 0;
+        border-radius: 0;
+        box-shadow: none;
+        transition: none;
+    }
+    
+    .box:hover,.box-pro:hover{
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .box a,.box-pro a{
+        font-size: 16px;
+        margin-top: 8px;
+        text-align: left;
+        color: #224870;
+        font-weight: bold;
+    }
+    
+    .box-content p{
+        font-size: 13px;
+        line-height: 1.4;
+        margin-top: 6px;
+        color: #333;
+        text-align: justify;
+    }
+    
+    .box-pic{
+        width: 100%;
+        height: auto;
+        max-height: 100px;
+        object-fit: cover;
+        margin-bottom: 8px;
+        border-radius: 0;
+        transition: none;
+    }
+    
+    .box:hover .box-pic,.box-pro:hover .box-pic{
+        transform: none;
+    }
+    
+    .box-pro .box-pic{
+        max-height: 80px;
+    }
+    
+    /* 为窄屏手机添加特殊样式 */
+    @media only screen and (max-width: 360px){
+        .box,.box-pro{
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .box-pic{
+            max-height: 120px;
+        }
+        .box-pro .box-pic{
+            max-height: 100px;
+        }
+    }
+    
+    /* 视频和设计部分一行两个 */
+    .video-box,.design{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 15px;
+        gap: 15px;
+        margin: 30px 0;
+    }
+    
+    .video-box .vi,.show{
+        width: calc(50% - 8px);
+        height: 200px;
+        margin: 0;
+        float: none;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .video-box .vi img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    /* 底部文字大小调整 */
+    .foot-left h1{
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    
+    .foot-left h3{
+        font-size: 18px;
+        word-spacing: 1rem;
+        margin: 5px 0;
+    }
+    
+    .footer{
+        padding: 30px 20px;
+        height: auto;
+    }
+
+}

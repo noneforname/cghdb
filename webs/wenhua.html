@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查干湖冬捕文化</title>
+    <link rel="stylesheet" href="../css/demo.css">
+    <!-- <link rel="stylesheet" href="../css/wenhua.css"> -->
+</head>
+<body>
+    <!-- 网页顶部 -->
+    <div class="top">
+        <img src="../pics/title.jpg" alt="">
+    </div>
+     
+    <!-- 导航栏 -->
+    <div class="navbar">
+     <ul class="navlink">
+        <li><a href="../index.html">首页</a></li>
+          <li><a href="wenhua.html">查干湖冬捕文化</a></li>
+            <li><a href="liucheng.html">冬捕流程</a></li>
+              <li><a href="yingxiang.html">冬捕影像</a></li>
+                <li><a href="ip.html">IP设计专区</a></li>
+                <li><a href="contactus.html">联系我们</a></li>
+       </ul>
+       <img src="../pics/navbtn.jpeg" alt="" class="menu-btn">
+    </div>
+    <!--副标题-->
+     <div class="title">
+        <div class="title-dot"></div>
+        <div class="title-line"></div>
+        <div class="title-content">查干湖冬捕文化</div>
+        <div class="title-line"></div>
+        <div class="title-dot"></div>
+     </div>
+
+    <!-- 冬捕文化内容 -->
+    <div class="big-box">
+        <div class="box">
+            <img src="../pics/冬捕起源.jpg" alt="" class="box-pic" loading="lazy">
+            <a href="#">冬捕起源</a>
+            <div class="box-content">
+                <p>千年以前，我们的祖辈就在查干湖上凿冰捕鱼。冬捕，不只是生计，更是敬畏自然的方式。冰封三尺，我们以智慧与耐力，与湖水对话。一湖寒冰，一网千年。</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../pics/祭湖仪式.jpg" alt="" class="box-pic" loading="lazy">
+            <a href="#">祭湖仪式</a>
+            <div class="box-content">
+                <p>开捕前，我们要先"请湖醒"。敬火、献酒、祈福，都是为了告诉湖神："我们只取所需，不破自然。"祭湖，是冬捕最庄重的一刻。既是礼，也是心安。</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="big-box">
+        <div class="box">
+            <img src="../pics/渔具展示.jpg" alt="" class="box-pic" loading="lazy">
+            <a href="#">渔具展示</a>
+            <div class="box-content">
+                <p>木驴、冰镩、鱼叉、绞盘……这些工具陪着我们走过无数严冬。它们没有机器的轰鸣，却有手艺人的温度。工具简朴，技艺深藏。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="foot-content">
+            <p>地址:中国吉林长春</p>
+            <p>电话:15124426429</p>
+            <p>邮箱:2440941908@qq.com</p>
+            <p>QQ:2440941908</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.menu-btn');
+            const navlink = document.querySelector('.navlink');
+            
+            if (menuBtn && navlink) {
+                menuBtn.addEventListener('click', function() {
+                    navlink.classList.toggle('menu-btn');
+                });
+                
+                const navLinks = document.querySelectorAll('.navlink a');
+                navLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        navlink.classList.remove('menu-btn');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
