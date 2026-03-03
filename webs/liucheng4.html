@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冬捕流程 - 合围收网</title>
+    <link rel="stylesheet" href="../css/demo.css">
+    <link rel="stylesheet" href="../css/lc.css">
+    <style>
+        .step-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: transparent;
+            border-radius: 10px;
+            box-shadow: none;
+        }
+        .step-content {
+            text-align: center;
+        }
+        .step-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .step-content h2 {
+            color: #224870;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        .step-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #224870;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #1a365d;
+        }
+        .btn-home {
+            background-color: #4CAF50;
+        }
+        .btn-home:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- 网页顶部 -->
+    <div class="top">
+        <img src="../pics/title.jpg" alt="">
+    </div>
+    
+    <!-- 导航栏 -->
+    <div class="navbar">
+     <ul class="navlink">
+        <li><a href="../index.html">首页</a></li>
+          <li><a href="wenhua.html">查干湖冬捕文化</a></li>
+            <li><a href="liucheng.html">冬捕流程</a></li>
+              <li><a href="yingxiang.html">冬捕影像</a></li>
+                <li><a href="ip.html">IP设计专区</a></li>
+                <li><a href="contactus.html">联系我们</a></li>
+       </ul>
+       <img src="../pics/navbtn.jpeg" alt="" class="menu-btn">
+    </div>
+    <!--副标题-->
+
+
+    <!-- 步骤内容 -->
+    <div class="step-container">
+        <div class="step-content">
+            <img src="../pics/收网.jpg" alt="合围收网" loading="lazy">
+            <h2>合围收网</h2>
+            <p>木驴一圈圈拉动，力量汇聚在冰面之上。渔民们使用传统的木驴（一种绞盘装置）拉动渔网，将分散在湖中的渔网逐渐收拢。这个过程需要团队协作，大家齐心协力将渔网拉到冰面。</p>
+            <p>合围收网的过程中，渔民们会将渔网的两端固定在木驴上，然后通过转动木驴来拉动渔网。随着木驴的转动，渔网会逐渐收拢，将湖中的鱼群包围在渔网中。</p>
+            <p>合围收网是一项体力活，需要渔民们齐心协力才能完成。当渔网被拉到冰面时，渔民们会兴奋地欢呼，因为这意味着他们的辛勤劳动即将得到回报。</p>
+        </div>
+        <div class="btn-container">
+            <a href="liucheng3.html" class="btn">上一步：布网沉网</a>
+            <a href="liucheng5.html" class="btn">下一步：万鱼跃冰</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="foot-content">
+            <p>地址:中国吉林长春</p>
+            <p>电话:15124426429</p>
+            <p>邮箱:2440941908@qq.com</p>
+            <p>QQ:2440941908</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.menu-btn');
+            const navlink = document.querySelector('.navlink');
+            
+            if (menuBtn && navlink) {
+                menuBtn.addEventListener('click', function() {
+                    navlink.classList.toggle('menu-btn');
+                });
+                
+                const navLinks = document.querySelectorAll('.navlink a');
+                navLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        navlink.classList.remove('menu-btn');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

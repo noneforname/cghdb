@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冬捕流程</title>
+    <link rel="stylesheet" href="../css/demo.css">
+    <link rel="stylesheet" href="../css/lc.css">
+</head>
+<body>
+    <!-- 网页顶部 -->
+    <div class="top">
+        <img src="../pics/title.jpg" alt="">
+    </div>
+     
+    <!-- 导航栏 -->
+    <div class="navbar">
+     <ul class="navlink">
+        <li><a href="../index.html">首页</a></li>
+          <li><a href="wenhua.html">查干湖冬捕文化</a></li>
+            <li><a href="liucheng.html">冬捕流程</a></li>
+              <li><a href="yingxiang.html">冬捕影像</a></li>
+                <li><a href="ip.html">IP设计专区</a></li>
+                <li><a href="contactus.html">联系我们</a></li>
+       </ul>
+       <img src="../pics/navbtn.jpeg" alt="" class="menu-btn">
+    </div>
+    <!--副标题-->
+     <div class="title">
+        <div class="title-dot"></div>
+        <div class="title-line"></div>
+        <div class="title-content">冬捕流程</div>
+        <div class="title-line"></div>
+        <div class="title-dot"></div>
+     </div>
+
+    <!-- 冬捕流程内容 -->
+    <div class="big-box">
+        <div class="box-pro">
+            <img src="../pics/祭湖启网.jpg" alt="" class="box-pic" loading="lazy">
+            <a href="liucheng1.html">祭湖启网</a>
+            <div class="box-content">
+                <p>点燃圣火，敲定开捕。</p>
+            </div>
+        </div>
+
+        <div class="box-pro">
+            <img src="../pics/凿冰通眼.jpg" alt="" class="box-pic" loading="lazy">
+            <a href="liucheng2.html">凿冰通眼</a>
+            <div class="box-content">
+                <p>数百米冰面上，一眼连一眼。</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="big-box">
+        <div class="box-pro">
+            <img src="../pics/布网沉网.jpg" alt="" class="box-pic" loading="lazy">
+            <a href="liucheng3.html">布网沉网</a>
+            <div class="box-content">
+                <p>依靠经验，让大网稳稳沉入湖底。</p>
+            </div>
+        </div>
+
+        <div class="box-pro">
+            <img src="../pics/收网.jpg" alt="" class="box-pic" loading="lazy">
+            <a href="liucheng4.html">合围收网</a>
+            <div class="box-content">
+                <p>木驴一圈圈拉动，力量汇聚在冰面之上。</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="big-box">
+        <div class="box-pro">
+            <img src="../pics/万鱼跃冰.jpg" alt="" class="box-pic" loading="lazy">
+            <a href="liucheng5.html">万鱼跃冰</a>
+            <div class="box-content">
+                <p>那一瞬，是冬捕的灵魂。</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div class="footer">
+        <div class="foot-content">
+            <p>地址:中国吉林长春</p>
+            <p>电话:15124426429</p>
+            <p>邮箱:2440941908@qq.com</p>
+            <p>QQ:2440941908</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.menu-btn');
+            const navlink = document.querySelector('.navlink');
+            
+            if (menuBtn && navlink) {
+                menuBtn.addEventListener('click', function() {
+                    navlink.classList.toggle('menu-btn');
+                });
+                
+                const navLinks = document.querySelectorAll('.navlink a');
+                navLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        navlink.classList.remove('menu-btn');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

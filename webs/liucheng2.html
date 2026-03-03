@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冬捕流程 - 凿冰通眼</title>
+    <link rel="stylesheet" href="../css/demo.css">
+    <link rel="stylesheet" href="../css/lc.css">
+    <style>
+        .step-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: transparent;
+            border-radius: 10px;
+            box-shadow: none;
+        }
+        .step-content {
+            text-align: center;
+        }
+        .step-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .step-content h2 {
+            color: #224870;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        .step-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #224870;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #1a365d;
+        }
+        .btn-home {
+            background-color: #4CAF50;
+        }
+        .btn-home:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- 网页顶部 -->
+    <div class="top">
+        <img src="../pics/title.jpg" alt="">
+    </div>
+    
+    <!-- 导航栏 -->
+    <div class="navbar">
+     <ul class="navlink">
+        <li><a href="../index.html">首页</a></li>
+          <li><a href="wenhua.html">查干湖冬捕文化</a></li>
+            <li><a href="liucheng.html">冬捕流程</a></li>
+              <li><a href="yingxiang.html">冬捕影像</a></li>
+                <li><a href="ip.html">IP设计专区</a></li>
+                <li><a href="contactus.html">联系我们</a></li>
+       </ul>
+       <img src="../pics/navbtn.jpeg" alt="" class="menu-btn">
+    </div>
+    <!--副标题-->
+
+
+    <!-- 步骤内容 -->
+    <div class="step-container">
+        <div class="step-content">
+            <img src="../pics/凿冰通眼.jpg" alt="凿冰通眼" loading="lazy">
+            <h2>凿冰通眼</h2>
+            <p>数百米冰面上，一眼连一眼。渔民们使用冰镩在冰面上凿出一系列冰眼，这些冰眼将用于布网。凿冰通眼需要丰富的经验和技巧，确保冰眼的位置和间距合理，为后续的布网工作做好准备。</p>
+            <p>凿冰通眼的过程中，渔民们需要根据湖水的深度、鱼群的分布等因素来确定冰眼的位置和数量。一般来说，冰眼之间的距离在10-20米之间，形成一条直线或弧形，以便于渔网的展开。</p>
+            <p>凿冰通眼是一项体力活，需要渔民们手持冰镩不断地敲击冰面，直到凿穿整个冰层。在严寒的冬季，这项工作对渔民们的体力和毅力都是一种考验。</p>
+        </div>
+        <div class="btn-container">
+            <a href="liucheng1.html" class="btn">上一步：祭湖启网</a>
+            <a href="liucheng3.html" class="btn">下一步：布网沉网</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="foot-content">
+            <p>地址:中国吉林长春</p>
+            <p>电话:15124426429</p>
+            <p>邮箱:2440941908@qq.com</p>
+            <p>QQ:2440941908</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.menu-btn');
+            const navlink = document.querySelector('.navlink');
+            
+            if (menuBtn && navlink) {
+                menuBtn.addEventListener('click', function() {
+                    navlink.classList.toggle('menu-btn');
+                });
+                
+                const navLinks = document.querySelectorAll('.navlink a');
+                navLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        navlink.classList.remove('menu-btn');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
